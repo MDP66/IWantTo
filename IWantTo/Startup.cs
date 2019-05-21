@@ -1,7 +1,11 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using IWantTo.Bot;
+
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+
+using Telegram.Bot;
 
 namespace IWantTo
 {
@@ -9,6 +13,7 @@ namespace IWantTo
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton(BotClientFactory.CreateClient());
         }
 
 
