@@ -1,6 +1,6 @@
 ﻿using Telegram.Bot;
 
-namespace IWantTo.Bot
+namespace IWantTo.Responder.Bot
 {
     public class BotClientFactory
     {

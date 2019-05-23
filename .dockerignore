@@ -4,6 +4,7 @@
 .gitignore
 .vs
 .vscode
+docker-composupdate.yml
+docker-composupdate.*.yml
 */bin
 */obj
-**/.toolstarget
