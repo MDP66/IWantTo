@@ -17,6 +17,9 @@ namespace IWantTo.Responder.Entities
         public DateTime SendDate { get; set; }
 
 
+        [BsonElement("IsPersonal")]
+        public bool? IsPersonal { get; set; }
+
         [BsonElement("IsDone")]
         public bool IsDone { get; set; }
 

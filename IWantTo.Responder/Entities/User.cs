@@ -5,13 +5,14 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace IWantTo.Responder.Entities
 {
-    public class Users
+    public class User
     {
-        public Users()
+        public User()
         {
             Tasks = new List<ToDoTask>();
             Groups = new List<Group>();
         }
+
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
@@ -24,6 +25,9 @@ namespace IWantTo.Responder.Entities
         public string UserID { get; set; }
         [BsonElement("Username")]
         public string Username { get; set; }
+        [BsonElement("SendOnGroups")]
+        public long SendOnGroups { get; set; }
+
         [BsonElement("State")]
         public string State { get; set; }
 
