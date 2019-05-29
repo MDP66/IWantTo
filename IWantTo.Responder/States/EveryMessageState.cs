@@ -9,6 +9,7 @@ namespace IWantTo.Responder.States
         {
             AddAction(new ValidateUserAction());
             AddAction(new ValidateUserGroupAction());
+            BreakChain = false;
         }
 
         public override bool IsRequestMatch(string command)

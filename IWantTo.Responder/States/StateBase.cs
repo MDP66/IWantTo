@@ -16,6 +16,7 @@ namespace IWantTo.Responder.States
         {
             StateTitle = stateTitle;
             _Actions = new List<IAction>();
+            BreakChain = true;
         }
         public virtual async Task HandleAsync(Context context)
         {
@@ -35,5 +36,7 @@ namespace IWantTo.Responder.States
             if (action != null)
                 _Actions.Add(action);
         }
+
+        public bool BreakChain { get; set; }
     }
 }

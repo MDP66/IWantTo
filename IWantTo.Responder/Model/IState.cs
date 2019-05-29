@@ -31,5 +31,7 @@ namespace IWantTo.Responder.Model
         /// </summary>
         /// <returns></returns>
         bool IsRequestMatch(string command);
+
+        bool BreakChain { get; set; }
     }
 }
